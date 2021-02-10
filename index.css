@@ -1,5 +1,9 @@
+:root {
+  --platzi: hsl(82, 56%, 52%);
+}
+
 .text-platzi {
-  color: #57973e i !important;
+  color: var(--platzi) !important;
 }
 
 #header img {
