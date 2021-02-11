@@ -43,3 +43,12 @@
 #footer a {
   color: white;
 }
+
+#lugarYFecha {
+  background: #343a40;
+  color: white;
+}
+
+#lugarYFecha img {
+  max-width: 100%;
+}

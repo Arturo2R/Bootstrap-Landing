@@ -18,9 +18,12 @@
     />
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar" data-offset="57px">
     <!-- Header -->
-    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav
+      id="header"
+      class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"
+    >
       <div class="container">
         <a class="navbar-brand" href="#"
           ><img
@@ -39,24 +42,30 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbar">
           <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a class="nav-link" aria-current="page" href="#main"
                 >La Conferencia</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Los Oradores</a>
+              <a class="nav-link" href="#speakers">Los Oradores</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">El lugar y la fecha</a>
+              <a class="nav-link" href="#lugarYFecha">El lugar y la fecha</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Conviertete en Orador</a>
+              <a class="nav-link" href="#Conviertete">Conviertete en Orador</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-platzi" href="#">Comprar Tickets</a>
+              <button
+                class="btn btn-outline nav-link text-platzi"
+                data-toggle="modal"
+                data-target="#ModalCompra"
+              >
+                Comprar Tickets
+              </button>
             </li>
           </ul>
         </div>
@@ -113,7 +122,12 @@
                   <a href="#" type="button" class="btn btn-outline-light"
                     >Quiero ser orador</a
                   >
-                  <button type="button" class="btn btn-success">
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    data-toggle="modal"
+                    data-target="#ModalCompra"
+                  >
                     Comprar tickets
                   </button>
                 </div>
@@ -134,7 +148,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-xs col-sm-6 col-md-3 mb-md-4">
+            <div class="col-12 col-sm-6 col-lg-3 mb-md-4">
               <div class="card">
                 <img
                   class="card-img-top"
@@ -155,7 +169,7 @@
                 </div>
               </div>
             </div>
-            <div class="col col-xs-6 col-sm-6 col-md-3">
+            <div class="col-12 col-sm-6 col-lg-3 mb-md-4">
               <div class="card">
                 <img
                   class="card-img-top"
@@ -176,7 +190,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xs col-sm-6 col-md-3 mb-md-4">
+            <div class="col-12 col-sm-6 col-lg-3 mb-md-4">
               <div class="card">
                 <img
                   class="card-img-top"
@@ -198,11 +212,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-xs col-sm-6 col-md-3 mb-md-4">
+            <div class="col-12 col-sm-6 col-lg-3 mb-md-4">
               <div class="card">
                 <img
                   class="card-img-top"
-                  src="assets/images/speakers/leonidas.jpeg"
+                  src="assets/images/speakers/leonidas2.jpeg"
                   alt="Card image cap"
                 />
                 <div class="card-body">
@@ -223,9 +237,109 @@
           </div>
         </div>
       </section>
-
       <!-- Fin Speakers -->
+
+      <!-- Lugar y fecha  -->
+      <section id="lugarYFecha">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-lg-6 px-0">
+              <img src="assets/images/images/honolulu.jpg" alt="Honolulu" />
+            </div>
+            <div class="col-12 col-lg-6 pt-2 align-self-center py-4">
+              <h2 class="">Honolulu - Octubre del 2019</h2>
+              <p>
+                Honolulu o Honolulú es la capital y localidad más grande del
+                estado de Hawái, en los Estados Unidos. Honolulu es la más
+                sureña de entre las principales ciudades estadounidenses. Aunque
+                el nombre de Honolulu se refiere al área urbana en la costa
+                sureste de la isla de Oahu, la ciudad y el condado de Honolulu
+                han formado una ciudad-condado consolidada que cubre toda la
+                isla (aproximadamente 600 km² de superficie).
+              </p>
+              <a
+                href="wikipedia.com/wiki/Honolulu"
+                class="btn btn-outline-light"
+                >Conoce más</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Fin Lugar y fecha  -->
+
+      <!-- Conviertete en Orador -->
+      <section id="Conviertete" class="py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center text-uppercase">
+              <small class="">Conviertete en un</small>
+              <h2>Orador</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center">
+              <p>
+                Anotate como orador para dar una charla
+                <abbr title="Charlas de 5 minutos" data-toggle="tooltip"
+                  >Ignite</abbr
+                >
+                . Cuentanos de que quires hablar
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 mt-2 pt-2"
+            >
+              <form>
+                <div class="row">
+                  <div class="form-group col col-12 col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Nombre"
+                    />
+                  </div>
+                  <div class="form-group col col-12 col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Apellido"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col">
+                    <textarea
+                      name="text"
+                      id=""
+                      cols="30"
+                      rows="10"
+                      class="form-control form-control-lg"
+                      placeholder="De que Quieres Hablar?"
+                    ></textarea>
+                    <small class="form-text form-muted"
+                      >Recuerda que debes incluir un titulo para tu
+                      charla</small
+                    >
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col">
+                    <button type="submit" class="btn btn-success btn-block">
+                      Enviar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Fin Conviertete en Orador -->
     </main>
+
     <!-- Fin Main -->
     <footer id="footer" class="pb-4 pt-4">
       <div class="container">
@@ -239,6 +353,67 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="ModalCompra"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">
+              Comprar tickets
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="form-row">
+                <div class="form-group col">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">@</span>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Username"
+                      aria-label="Username"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="alert alert-warning" role="alert">
+              Recibiras un correo de confirmación si sales sorteado
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-success">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- JavaScript Bundle with Popper -->
